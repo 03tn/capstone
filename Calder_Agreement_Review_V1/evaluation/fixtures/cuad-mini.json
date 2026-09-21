@@ -1,0 +1,49 @@
+{
+  "version": "1.0",
+  "data": [
+    {
+      "title": "synthetic-positive",
+      "paragraphs": [
+        {
+          "context": "LIMITATION OF LIABILITY. Vendor's aggregate liability shall not exceed the fees paid in the prior twelve months. This Agreement shall be governed by the laws of Georgia.",
+          "qas": [
+            {
+              "id": "synthetic-positive__Cap On Liability",
+              "question": "Highlight the parts related to Cap On Liability",
+              "is_impossible": false,
+              "answers": [{"text": "Vendor's aggregate liability shall not exceed the fees paid in the prior twelve months.", "answer_start": 25}]
+            },
+            {
+              "id": "synthetic-positive__Governing Law",
+              "question": "Highlight the parts related to Governing Law",
+              "is_impossible": false,
+              "answers": [{"text": "This Agreement shall be governed by the laws of Georgia.", "answer_start": 110}]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "synthetic-negative",
+      "paragraphs": [
+        {
+          "context": "The parties will cooperate on implementation and provide monthly status reports.",
+          "qas": [
+            {
+              "id": "synthetic-negative__Cap On Liability",
+              "question": "Highlight the parts related to Cap On Liability",
+              "is_impossible": true,
+              "answers": []
+            },
+            {
+              "id": "synthetic-negative__Governing Law",
+              "question": "Highlight the parts related to Governing Law",
+              "is_impossible": true,
+              "answers": []
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

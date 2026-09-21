@@ -1,0 +1,13 @@
+{
+  "dataset": "CUAD v1 PDF/TXT pairs",
+  "documents": 509,
+  "matchedPairsAvailable": 509,
+  "medianTokenRecall": 1,
+  "documentPassRate": 1,
+  "thresholds": {
+    "minimumMedianTokenRecall": 0.9,
+    "documentRecallFloor": 0.8,
+    "minimumDocumentPassRate": 0.95
+  },
+  "decision": "continue"
+}
