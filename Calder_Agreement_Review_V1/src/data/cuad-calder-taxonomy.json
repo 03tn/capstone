@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "source": "CUAD v1 and the CUAD Commercial Contracts Labeling Handbook (September 9, 2021)",
+  "scope": "Presence identification only. Descriptions and cues retrieve candidate clauses; they do not make risk, deviation, or gap decisions.",
+  "provisions": [
+    {
+      "calderProvision": "Cap on Liability",
+      "cuadCategories": ["Cap On Liability"],
+      "description": "A ceiling, time limit, or maximum recovery applying to liability for breach.",
+      "exclusions": ["Do not label a list of uncapped-liability exceptions unless the same span also states a cap or other liability ceiling."],
+      "contractTypes": ["Software Subscription", "Professional Services", "Licensing", "Logistics and Freight", "Data Processing Addendum", "Mutual NDA", "Other"],
+      "candidatePhrases": ["limitation of liability", "aggregate liability", "liability shall not exceed", "maximum liability", "liability cap", "in no event shall liability", "amount recoverable", "claims must be brought within"]
+    },
+    {
+      "calderProvision": "Auto Renewal",
+      "cuadCategories": ["Renewal Term"],
+      "description": "Automatic or unilateral extension of the agreement after the initial term.",
+      "exclusions": ["Do not label the initial term or a renewal that requires a new mutual agreement; the extension must be automatic or exercisable by one party."],
+      "contractTypes": ["Software Subscription", "Licensing"],
+      "candidatePhrases": ["automatically renew", "automatic renewal", "successive renewal", "renewal term", "shall renew", "extended for successive", "renew for an additional"]
+    },
+    {
+      "calderProvision": "Renewal Notice",
+      "cuadCategories": ["Notice Period To Terminate Renewal"],
+      "description": "Advance notice required to prevent or terminate a renewal.",
+      "exclusions": ["Do not label a general termination notice period unless the text ties the notice to renewal or expiration."],
+      "contractTypes": ["Software Subscription", "Licensing"],
+      "candidatePhrases": ["notice of non-renewal", "notice not to renew", "terminate renewal", "prior to renewal", "before expiration", "days prior written notice", "months prior written notice"]
+    },
+    {
+      "calderProvision": "Governing Law",
+      "cuadCategories": ["Governing Law"],
+      "description": "The state, province, or country whose law governs interpretation of the agreement.",
+      "exclusions": ["Do not label venue, forum, or arbitration location alone when no governing law is identified."],
+      "contractTypes": ["Software Subscription", "Professional Services", "Licensing", "Logistics and Freight", "Data Processing Addendum", "Mutual NDA", "Other"],
+      "candidatePhrases": ["governed by", "governing law", "laws of the state of", "construed in accordance with", "laws of", "jurisdiction"]
+    },
+    {
+      "calderProvision": "Exclusivity",
+      "cuadCategories": ["Exclusivity"],
+      "description": "Exclusive dealing, requirements purchasing, or restrictions on working with third parties.",
+      "exclusions": ["Do not label an exclusive remedy, an exclusive jurisdiction clause, or an intellectual-property license merely because it uses the word exclusive."],
+      "contractTypes": ["Software Subscription", "Licensing"],
+      "candidatePhrases": ["exclusive", "exclusively", "exclusivity", "sole provider", "all requirements", "shall not engage", "shall not license", "shall not sell to"]
+    },
+    {
+      "calderProvision": "Termination for Convenience",
+      "cuadCategories": ["Termination For Convenience"],
+      "description": "A right to terminate without cause after notice or a waiting period.",
+      "exclusions": ["Do not label termination limited to breach, insolvency, force majeure, or another stated cause."],
+      "contractTypes": ["Professional Services", "Logistics and Freight", "Other"],
+      "candidatePhrases": ["termination for convenience", "terminate for convenience", "without cause", "for any reason", "for no reason", "at any time upon", "sole discretion may terminate"]
+    },
+    {
+      "calderProvision": "Assignment / Control",
+      "cuadCategories": ["Anti-Assignment", "Change Of Control"],
+      "description": "Consent, notice, or termination rights tied to assignment or a change in control.",
+      "exclusions": ["Do not label an ordinary license grant or transfer of goods unless it governs assignment of the agreement, rights, obligations, or a change in control."],
+      "contractTypes": ["Licensing", "Data Processing Addendum", "Mutual NDA", "Other"],
+      "candidatePhrases": ["may not assign", "shall not assign", "assignment", "assign this agreement", "prior written consent", "change of control", "merger", "operation of law", "substantially all assets"]
+    },
+    {
+      "calderProvision": "Audit Rights",
+      "cuadCategories": ["Audit Rights"],
+      "description": "A right to inspect or audit books, records, systems, or locations for compliance.",
+      "exclusions": ["Do not label a reference to a party's normal financial audit unless another party receives an inspection, access, or assurance-report right."],
+      "contractTypes": ["Data Processing Addendum"],
+      "candidatePhrases": ["right to audit", "audit rights", "inspect the books", "inspect records", "inspection of", "audit of", "access to records", "soc 2", "assurance report"]
+    },
+    {
+      "calderProvision": "Insurance",
+      "cuadCategories": ["Insurance"],
+      "description": "A requirement that a party maintain specified insurance coverage.",
+      "exclusions": ["Do not label a passing reference to insurers or insurance proceeds without an obligation to maintain coverage or provide evidence of it."],
+      "contractTypes": ["Professional Services", "Logistics and Freight", "Data Processing Addendum", "Other"],
+      "candidatePhrases": ["maintain insurance", "insurance coverage", "commercial general liability", "professional liability", "cyber liability", "certificate of insurance", "additional insured", "policy limits"]
+    },
+    {
+      "calderProvision": "Warranty Duration",
+      "cuadCategories": ["Warranty Duration"],
+      "description": "The period during which a warranty against defects or errors applies.",
+      "exclusions": ["Do not label a warranty or disclaimer that does not state a duration, deadline, or measurable warranty period."],
+      "contractTypes": ["Professional Services"],
+      "candidatePhrases": ["warranty period", "warranty shall", "warrants for", "days following acceptance", "months from delivery", "years from delivery", "defects for a period", "errors for a period"]
+    }
+  ]
+}
