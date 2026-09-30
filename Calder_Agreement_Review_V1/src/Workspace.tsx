@@ -13,6 +13,7 @@ import {
   FileText,
   Gavel,
   LayoutDashboard,
+  Loader2,
   PanelLeftOpen,
   Plus,
   Search,
@@ -569,9 +570,19 @@ function Intake({
     }),
     [file, setFile] = useState<File | null>(null),
     [analysisMode, setAnalysisMode] = useState<AnalysisMode>("automatic"),
-    [analysisStatus, setAnalysisStatus] = useState("");
+    [analysisStatus, setAnalysisStatus] = useState(""),
+    [submitting, setSubmitting] = useState(false);
   const send = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (submitting) return;
+    setSubmitting(true);
+    try {
+      await runSubmission();
+    } finally {
+      setSubmitting(false);
+    }
+  };
+  const runSubmission = async () => {
     if (!file) {
       toast.error("Choose a searchable PDF or TXT file before submitting.");
       return;
@@ -784,13 +795,34 @@ function Intake({
             </label>
           </div>
           <div className="form-actions">
-            <Button type="submit" disabled={busy}>
-              {busy ? "Submitting…" : "Submit for review"}
+            <Button
+              type="submit"
+              disabled={busy || submitting}
+              aria-busy={busy || submitting}
+            >
+              {busy || submitting ? (
+                <>
+                  <Loader2 className="animate-spin" aria-hidden="true" />
+                  Submitting…
+                </>
+              ) : (
+                "Submit for review"
+              )}
             </Button>
             <span>Submission creates an attributable audit record.</span>
           </div>
           {analysisStatus && (
-            <div className="analysis-status" role="status">
+            <div
+              className="analysis-status flex items-center gap-2"
+              role="status"
+            >
+              {submitting && (
+                <Loader2
+                  size={14}
+                  className="shrink-0 animate-spin"
+                  aria-hidden="true"
+                />
+              )}
               {analysisStatus}
             </div>
           )}
